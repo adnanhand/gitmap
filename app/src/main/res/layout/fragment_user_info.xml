@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginHorizontal="@dimen/content_margin"
+            android:layout_marginBottom="@dimen/content_margin"/>
+
+    </RelativeLayout>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/box_rounded_foreground"
+        android:scrollbars="none"
+        android:layout_margin="@dimen/content_margin"
+        android:padding="5dp">
+
+        <com.a.hub.view.ContributionsCalendar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"/>
+
+    </HorizontalScrollView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="11sp"
+        android:textStyle="italic"
+        android:text="fake - random data"/>
+
+
+</LinearLayout>

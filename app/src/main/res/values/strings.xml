@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">gitmap</string>
+    <string name="name">name</string>
+
+    <string name="sign_in_text">Sign In with GitHub</string>
+    <string name="revoke_text">Revoke GitHub Auth</string>
+    <string name="sign_out_text">Sign Out of GitHub</string>
+    <string name="no_description">No description…</string>
+
+    <string name="sign_in">Sign In</string>
+    <string name="sign_out">Sign Out</string>
+
+    <string name="dark_mode">Dark Mode</string>
+
+    <string name="forks">Forks</string>
+    <string name="stars">Stars</string>
+    <string name="update">Update</string>
+    <string name="sort_by">Sort by</string>
+    <string name="search_intro">…explore your world</string>
+
+    <string name="no_data">no data</string>
+    <string name="dev_state">not available</string>
+    <string name="no_internet_connection">No internet connection</string>
+    <string name="sort_asc">Sort ASC</string>
+    <string name="sort_desc">Sort DESC</string>
+    <string name="sort_by_updated">Sort by Updated</string>
+    <string name="sort_by_stars">Sort by Stars</string>
+    <string name="sort_by_forks">Sort by Forks</string>
+    <string name="edit_recent">Edit Recent</string>
+    <string name="search">Search</string>
+    <string name="error_image">Error image</string>
+    <string name="error">Error</string>
+    <string name="loading">Loading</string>
+    <string name="icon">Icon</string>
+    <string name="user_image">User image</string>
+    <string name="image">Image</string>
+    <string name="_0">0</string>
+</resources>

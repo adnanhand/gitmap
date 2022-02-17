@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:minHeight="40dp"
+    android:layout_marginTop="@dimen/item_margin_half"
+    android:layout_marginBottom="@dimen/item_margin_half"
+    android:elevation="@dimen/elevation_light"
+    android:background="@drawable/box_rounded_foreground">
+
+    <ImageView
+        android:id="@+id/item_image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/image" />
+
+    <TextView
+        android:id="@+id/item_full_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minWidth="100dp"
+        android:textSize="11sp"
+        android:gravity="center_vertical"
+        android:padding="2dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintStart_toEndOf="@+id/item_image"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/item_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minWidth="100dp"
+        android:gravity="center_vertical"
+        android:padding="2dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintStart_toEndOf="@+id/item_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/item_full_name"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/item_name">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/item_issues"
+            android:textColor="@color/green"
+            app:drawableStartCompat="@drawable/outline_adjust_24"
+            app:drawableTint="@color/green"
+            style="@style/style_repo_stats_min" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/item_stars"
+            app:drawableStartCompat="@drawable/outline_star_outline_24"
+            style="@style/style_repo_stats_min" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/item_forks"
+            app:drawableStartCompat="@drawable/outline_call_split_24"
+            style="@style/style_repo_stats_min" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/item_watchers"
+            app:drawableStartCompat="@drawable/outline_visibility_24"
+            style="@style/style_repo_stats_min" />
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

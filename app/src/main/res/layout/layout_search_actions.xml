@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/action_holder"
+    android:orientation="vertical"
+    android:visibility="gone"
+    tools:showIn="@layout/activity_main_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/primaryVariant"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/sort_order_holder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/box_circle_foreground"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+
+            <ImageView
+                android:id="@+id/action_sort_asc"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/box_circle_mid"
+                app:srcCompat="@drawable/outline_arrow_downward_24"
+                android:padding="5dp"
+                android:layout_margin="2dp"
+                app:tint="@color/blue"
+                android:contentDescription="@string/sort_asc" />
+
+            <ImageView
+                android:id="@+id/action_sort_desc"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/box_circle_mid"
+                app:srcCompat="@drawable/outline_arrow_upward_24"
+                android:padding="5dp"
+                android:layout_margin="2dp"
+                app:tint="@color/onPrimary"
+                android:contentDescription="@string/sort_desc" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sort_by"
+            android:textSize="12sp"
+            android:textAllCaps="true"
+            android:textStyle="italic|bold"
+            app:layout_constraintStart_toEndOf="@+id/sort_order_holder"
+            app:layout_constraintEnd_toStartOf="@+id/sort_by_holder"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+        <LinearLayout
+            android:id="@+id/sort_by_holder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/box_circle_foreground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <LinearLayout
+                android:id="@+id/action_sort_time_holder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:id="@+id/action_sort_time_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/box_circle_mid"
+                    app:srcCompat="@drawable/outline_schedule_24"
+                    android:padding="5dp"
+                    android:layout_margin="2dp"
+                    app:tint="@color/blue"
+                    android:contentDescription="@string/sort_by_updated" />
+
+                <TextView
+                    android:id="@+id/action_sort_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/update"
+                    android:textSize="12sp"
+                    android:textColor="@color/blue"
+                    android:textAllCaps="true"
+                    android:layout_marginEnd="8dp"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/action_sort_stars_holder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:id="@+id/action_sort_stars_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/box_circle_mid"
+                    app:srcCompat="@drawable/outline_star_outline_24"
+                    android:padding="5dp"
+                    android:layout_margin="2dp"
+                    app:tint="@color/onPrimary"
+                    android:contentDescription="@string/sort_by_stars" />
+
+                <TextView
+                    android:id="@+id/action_sort_stars"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/stars"
+                    android:textSize="12sp"
+                    android:textAllCaps="true"
+                    android:layout_marginEnd="8dp"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/action_sort_forks_holder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:id="@+id/action_sort_forks_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/box_circle_mid"
+                    app:srcCompat="@drawable/outline_call_split_24"
+                    android:padding="6dp"
+                    android:layout_margin="2dp"
+                    app:tint="@color/onPrimary"
+                    android:contentDescription="@string/sort_by_forks" />
+
+                <TextView
+                    android:id="@+id/action_sort_forks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/forks"
+                    android:textSize="12sp"
+                    android:textAllCaps="true"
+                    android:layout_marginEnd="8dp"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/primaryMid"/>
+
+    <RelativeLayout
+        android:id="@+id/recent_holder"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:background="@color/primaryVariant"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/recent_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/box_circle_foreground">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:padding="4dp"
+                android:layout_margin="2dp"
+                android:background="@drawable/box_circle_mid"
+                android:tintMode="src_in"
+                app:srcCompat="@drawable/outline_history_24"
+                app:tint="@color/red"
+                android:contentDescription="@string/edit_recent" />
+
+
+        </RelativeLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recent_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/recent_edit"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

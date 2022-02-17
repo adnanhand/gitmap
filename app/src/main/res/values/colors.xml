@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="primary">#FFFFFFFF</color>
+    <color name="primaryVariant">#FFE1E7ED</color>
+    <color name="primaryMid">#f5f7f9</color>
+    <color name="onPrimary">#FF6F8CAA</color>
+
+    <color name="secondary">#FFFF5252</color>
+    <color name="secondaryVariant">#FFFF1744</color>
+    <color name="onSecondary">#FFFFFFFF</color>
+
+    <color name="tint">#6F8CAA</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="transparent">#00FFFFFF</color>
+
+
+    <color name="red">#FF5353</color>
+    <color name="green">#5DD133</color>
+    <color name="blue">#53C3FF</color>
+    <color name="orange">#FFA647</color>
+    <color name="violet">#8747FF</color>
+    <color name="darkblue">#3F51B5</color>
+
+</resources>

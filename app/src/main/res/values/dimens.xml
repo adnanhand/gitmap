@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!--TODO update it programmatically-->
+    <dimen name="initial_status_bar_padding">25dp</dimen>
+
+    <dimen name="content_padding">5dp</dimen>
+    <dimen name="content_margin">5dp</dimen>
+    <dimen name="elevation">9dp</dimen>
+    <dimen name="elevation_mid">3dp</dimen>
+    <dimen name="elevation_light" tools:ignore="PxUsage">1dp</dimen>
+    <dimen name="box_round">8dp</dimen>
+    <dimen name="box_circle">120dp</dimen>
+    <dimen name="item_margin">5dp</dimen>
+    <dimen name="item_margin_half">3dp</dimen>
+</resources>

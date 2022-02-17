@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_centerVertical="true">
+
+        <TextView
+            android:id="@+id/item_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="80"
+            android:text="@string/no_description"
+            android:textSize="11sp"
+            android:maxLines="4"
+            android:gravity="start"
+            android:padding="5dp"
+            android:drawablePadding="10dp"
+            app:drawableTint="@color/tint"
+            app:drawableStartCompat="@drawable/outline_info_24" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="20"
+            tools:ignore="UselessLeaf" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/item_foreground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="40dp"
+        android:layout_marginTop="@dimen/item_margin_half"
+        android:layout_marginBottom="@dimen/item_margin_half"
+        android:elevation="@dimen/elevation_light"
+        android:background="@drawable/box_rounded_foreground">
+
+        <ImageView
+            android:id="@+id/item_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:contentDescription="@string/user_image" />
+
+        <TextView
+            android:id="@+id/item_full_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="11sp"
+            android:gravity="center_vertical"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintStart_toEndOf="@+id/item_image"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/item_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:textSize="16sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintStart_toEndOf="@+id/item_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/item_full_name"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="2dp"
+            android:layout_marginEnd="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/item_name">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/item_issues"
+                android:textColor="@color/green"
+                app:drawableStartCompat="@drawable/outline_adjust_24"
+                app:drawableTint="@color/green"
+                style="@style/style_repo_stats_min" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/item_stars"
+                app:drawableStartCompat="@drawable/outline_star_outline_24"
+                style="@style/style_repo_stats_min" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/item_forks"
+                app:drawableStartCompat="@drawable/outline_call_split_24"
+                style="@style/style_repo_stats_min" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/item_watchers"
+                app:drawableStartCompat="@drawable/outline_visibility_24"
+                style="@style/style_repo_stats_min" />
+
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
